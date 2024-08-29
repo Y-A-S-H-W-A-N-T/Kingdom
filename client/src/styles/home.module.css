@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #668cda;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.linkContainer {
+    padding: 10px 20px;
+}
+
+.link {
+    padding: 10px 20px;
+    background-color: #e54fb1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 600ms;
+    display: block; /* Ensure the link takes full width */
+    text-align: center; /* Center text within the link */
+    margin-bottom: 10px; /* Add space between buttons */
+}
+
+.link:hover {
+    transition: 300ms;
+    box-shadow: 0px 2px 2px black;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 769px) {
+    .container {
+        flex-direction: row; /* Side by side buttons on larger screens */
+    }
+
+    .linkContainer {
+        margin-right: 10px; /* Space between buttons */
+    }
+
+    .linkContainer:last-child {
+        margin-right: 0;
+    }
+}

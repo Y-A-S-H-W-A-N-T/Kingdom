@@ -1,0 +1,43 @@
+.container {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.heading{
+    font-family: cursive;
+    color: rgb(87, 112, 239);
+    font-size: 50px;
+}
+
+.studentRow {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.studentRow:hover {
+    transform: scale(1.02);
+}
+
+.studentDetail {
+    margin-left: 3%;
+    font-size: 16px;
+    color: #333;
+}
+
+.studentLink {
+    margin-left: 3%;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.studentLink:hover {
+    color: #0056b3;
+}

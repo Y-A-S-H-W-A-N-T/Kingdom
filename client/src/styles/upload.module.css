@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputFile {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.uploadButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.uploadButton:hover {
+    background-color: #45a049;
+}
+
+.pdfList {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.pdfList h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.pdfItem {
+    margin-bottom: 10px;
+}
+
+.pdfLink {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.pdfLink:hover {
+    color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    img{
+        height: 100px;
+        width: 400px;
+    }
+
+    .inputFile {
+        padding: 8px;
+    }
+
+    .uploadButton {
+        padding: 8px 15px;
+        width: 100%;
+    }
+
+    .pdfList {
+        margin-top: 15px;
+    }
+
+    .pdfList h3 {
+        font-size: 18px;
+    }
+
+    .pdfItem {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .inputFile {
+        padding: 6px;
+    }
+
+    .uploadButton {
+        padding: 6px 12px;
+        width: 100%;
+    }
+
+    .pdfList h3 {
+        font-size: 16px;
+    }
+
+    .pdfItem {
+        font-size: 12px;
+    }
+
+    .pdfLink {
+        font-size: 14px;
+    }
+}
