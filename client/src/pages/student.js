@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import styles from '../styles/class.module.css';
 
 function Students() {
-    const [student, setStudents] = useState([]);
+    const [student, setStudents] = useState([])
+    const [loading,setLoading] = useState(true)
 
     const getStudents = async () => {
         const result = await axios.post('https://kingdom-16ov.onrender.com/get-students');
-        setStudents(result.data);
+        setStudents(result.data)
+        setLoading(false)
     };
 
     useEffect(() => {
@@ -17,6 +19,7 @@ function Students() {
 
     return (
         <div className={styles.container}>
+            {loading && <p>Loading</p>}
           <h1 className={styles.heading}>Students</h1>
             {student &&
                 student.map((user, ind) => (

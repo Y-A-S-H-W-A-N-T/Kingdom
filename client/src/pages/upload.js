@@ -6,6 +6,7 @@ import Template from '../component/template.png'
 function App() {
     const [pdfFiles, setPdfFiles] = useState([]);
     const [file, setFile] = useState(null);
+    const [loading,setLoading] = useState(false)
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -18,6 +19,7 @@ function App() {
     };
 
     const handleUpload = async () => {
+        setLoading(true)
         if (!file) return;
 
         const formData = new FormData();
@@ -30,6 +32,7 @@ function App() {
                 },
             });
             setPdfFiles(response.data.pdfFiles);
+            setLoading(false)
         } catch (error) {
             console.error('Error uploading file:', error);
         }
@@ -48,8 +51,8 @@ function App() {
                 onChange={handleFileChange}
                 className={styles.inputFile}
             />
-            <button onClick={handleUpload} className={styles.uploadButton}>
-                Upload and Generate Report PDFs
+            <button onClick={handleUpload} className={styles.uploadButton} disabled={loading}>
+                {loading? 'Loading...' : 'Upload and Generate Report PDFs'}
             </button>
             <i>*Check class after uploading the results*</i>
             <div className={styles.pdfList}>
