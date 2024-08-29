@@ -28,7 +28,7 @@ function Students() {
                         {user.reportCard ? (
                             <p className={styles.studentDetail}>
                                 <a
-                                    href={`http://localhost:8000/download/${user.reportCard}`}
+                                    href={`https://kingdom-16ov.onrender.com/download/${user.reportCard}`}
                                     download
                                     className={styles.studentLink}
                                 >
