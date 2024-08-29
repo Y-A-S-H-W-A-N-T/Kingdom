@@ -24,7 +24,7 @@ function App() {
         formData.append('file', file);
 
         try {
-            const response = await axios.post('http://localhost:8000/generate-report', formData, {
+            const response = await axios.post('https://kingdom-16ov.onrender.com/generate-report', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -58,7 +58,7 @@ function App() {
                     {pdfFiles?.map((file) => (
                         <li key={file} className={styles.pdfItem}>
                             <a
-                                href={`http://localhost:8000/download/${file}`}
+                                href={`https://kingdom-16ov.onrender.com/download/${file}`}
                                 download
                                 className={styles.pdfLink}
                             >

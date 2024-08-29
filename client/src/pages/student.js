@@ -7,7 +7,7 @@ function Students() {
     const [student, setStudents] = useState([]);
 
     const getStudents = async () => {
-        const result = await axios.post('http://localhost:8000/get-students');
+        const result = await axios.post('https://kingdom-16ov.onrender.com/get-students');
         setStudents(result.data);
     };
 
